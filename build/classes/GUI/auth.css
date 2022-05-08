@@ -1,0 +1,16 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-image:url('img.jpg');
+}
+.mainFxmlClass1 {
+-fx-background-image:url('img1.jpg');
+-fx-background-size:contain;
+-fx-background-position:center;
+-fx-background-repeat:no-repeat;
+}
+.Nav {
+-fx-position: center;
+}

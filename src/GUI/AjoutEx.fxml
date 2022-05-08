@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutExController">
+    
+    <Pane prefHeight="583.0" prefWidth="214.0" style="-fx-background-color: #D0DEE5;">
+         <children>
+            <Label layoutX="30.0" layoutY="171.0" prefHeight="25.0" prefWidth="173.0" text="Admin Ahmed">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="24.0" layoutY="265.0">
+               <image>
+                  <Image url="@../images/sta.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="67.0" layoutY="270.0" text="Statistiques" />
+            <Label layoutX="66.0" layoutY="233.0" text="Exercices Musculation" />
+            <ImageView fitHeight="119.0" fitWidth="122.0" layoutX="45.0" layoutY="35.0">
+               <image>
+                  <Image url="@../images/Ahmed.JPG" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="214.0" layoutY="51.0" prefHeight="532.0" prefWidth="707.0" style="-fx-background-color: #97B7C8;">
+         
+
+          <children>
+           <Label layoutX="115.0" layoutY="121.0" text="Nom" />
+           <Label layoutX="81.0" layoutY="175.0" text="Description" />
+          <Label layoutX="81.0" layoutY="222.0" text="Repetition" />
+          <Label layoutX="201.0" layoutY="22.0" text="Ajouter Exercice">
+            <font>
+                <Font name="System Bold" size="33.0" />
+            </font>
+           </Label>
+           <TextField fx:id="i1" layoutX="176.0" layoutY="117.0" />
+          <TextField fx:id="i2" layoutX="175.0" layoutY="171.0" />
+           <TextField fx:id="i3" layoutX="175.0" layoutY="218.0" />
+         <Button layoutX="202.0" layoutY="337.0" mnemonicParsing="false" onAction="#AddEx" text="Ajouter" />
+         <Label layoutX="29.0" layoutY="275.0" text="Programme Musculation" />
+         <ComboBox fx:id="ExList" layoutX="175.0" layoutY="271.0" prefWidth="150.0" />
+         <Button layoutX="110.0" layoutY="337.0" mnemonicParsing="false" onAction="#retour" text="Retour" />
+      
+           </children>
+
+     </Pane>
+
+
+      <Pane layoutX="214.0" prefHeight="51.0" prefWidth="707.0" style="-fx-background-color: #D0DEE5;">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="56.0" layoutX="-2.0">
+               <image>
+                  <Image url="@../images/lolo.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="609.0" layoutY="17.0" text="Déconnexion" />
+            <Label layoutX="61.0" layoutY="13.0" text="My Coach">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      
+      
+      <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="23.0" layoutY="226.0">
+         <image>
+            <Image url="@../images/aza.png" />
+         </image>
+      </ImageView>
+   
+    
+    
+    
+    
+    
+</AnchorPane>

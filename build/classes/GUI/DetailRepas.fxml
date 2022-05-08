@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="577.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DetailRepasController">
+   <children>
+      <Label layoutX="206.0" layoutY="14.0" text="Details Repas">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="100.0" text="nom" />
+      <Label layoutX="110.0" layoutY="148.0" text="description" />
+      <Label layoutX="110.0" layoutY="195.0" text="proteine" />
+      <Label layoutX="110.0" layoutY="247.0" text="glucides" />
+      <Label layoutX="110.0" layoutY="298.0" text="legumes" />
+      <Label layoutX="110.0" layoutY="346.0" text="nombre calorie" />
+      <Label layoutX="110.0" layoutY="391.0" text="quantité legumes" />
+      <Label layoutX="110.0" layoutY="438.0" text="quantité glucides" />
+      <Label fx:id="l1" layoutX="231.0" layoutY="100.0" text="Label" />
+      <Label fx:id="l2" layoutX="234.0" layoutY="147.0" text="Label" />
+      <Label fx:id="l3" layoutX="234.0" layoutY="195.0" text="Label" />
+      <Label fx:id="l4" layoutX="234.0" layoutY="253.0" text="Label" />
+      <Label fx:id="l5" layoutX="234.0" layoutY="298.0" text="Label" />
+      <Label fx:id="l6" layoutX="231.0" layoutY="346.0" text="Label" />
+      <Label fx:id="l7" layoutX="231.0" layoutY="391.0" text="Label" />
+      <Label fx:id="l8" layoutX="231.0" layoutY="438.0" text="Label" />
+   </children>
+</AnchorPane>
