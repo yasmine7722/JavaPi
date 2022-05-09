@@ -56,6 +56,33 @@ Connection cnx;
             System.out.println(ex.getMessage());        
         }
     }
+      //afficher 
+    
+     public ObservableList<Ticket>affichertick(){
+       ObservableList<Ticket> myList = FXCollections.observableArrayList();
+        try {
+            
+            String requete3 = "SELECT * FROM ticket";
+            Statement st = cnx.createStatement();
+           ResultSet rs = st.executeQuery(requete3);
+           while(rs.next()){
+               Ticket P = new Ticket();
+                P.setId(rs.getInt(1));
+               P.setNom(rs.getString("nom"));
+              
+                P.setPrix(rs.getInt("prix"));
+               
+               myList.add(P);
+           }
+           
+           
+           
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return myList;
+        
+    }
 
  
    
@@ -104,33 +131,7 @@ Connection cnx;
     
 
   
-   //afficher 
-    
-     public ObservableList<Ticket>affichertick(){
-       ObservableList<Ticket> myList = FXCollections.observableArrayList();
-        try {
-            
-            String requete3 = "SELECT * FROM ticket";
-            Statement st = cnx.createStatement();
-           ResultSet rs = st.executeQuery(requete3);
-           while(rs.next()){
-               Ticket P = new Ticket();
-                P.setId(rs.getInt(1));
-               P.setNom(rs.getString("nom"));
-              
-                P.setPrix(rs.getInt("prix"));
-               
-               myList.add(P);
-           }
-           
-           
-           
-        } catch (SQLException ex) {
-            System.err.println(ex.getMessage());
-        }
-        return myList;
-        
-    }
+ 
     
     
     
