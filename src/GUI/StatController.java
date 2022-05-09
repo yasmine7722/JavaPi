@@ -42,6 +42,7 @@ public class StatController implements Initializable {
      * Initializes the controller class.
      */
     @Override
+    
     public void initialize(URL url, ResourceBundle rb) {
         }    
     
@@ -64,10 +65,11 @@ public class StatController implements Initializable {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }    
 
     @FXML
+    
+    
     private void ViewChart(ActionEvent event) {
           buildPieChartData();
     }
@@ -82,10 +84,7 @@ public class StatController implements Initializable {
               stage.show();
         } catch (IOException e) {
             System.err.println(e.getMessage());
-        }
-        
-        
-        
+        }    
     }
     
 }
