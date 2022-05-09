@@ -48,12 +48,12 @@ public class Utilisateur {
         this.username = username;
     }
 
-      public Utilisateur(String email, String username) {
-        this.email = email;
+    
+    
+    public Utilisateur(String password, String username) {
+        this.password = password;
         this.username = username;
     }
-    
-   
 
     public int getId() {
         return id;

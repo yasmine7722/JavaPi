@@ -5,13 +5,6 @@
  */
 package Entity;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author toshiba
@@ -20,15 +13,12 @@ public class ProgNutri {
     
       private int id;
     private String nom;
-  
 
     @Override
     public String toString() {
         return "ProgNutri{" + "id=" + id + ", nom=" + nom + '}';
     }
 
-    
-    
     
     
     public ProgNutri(int id, String nom) {

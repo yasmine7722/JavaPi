@@ -5,18 +5,13 @@
  */
 package javapi;
 import Entity.Event;
-import Entity.Exercice;
-import Entity.ProgMuscul;
-import Entity.Utilisateur;
+import Entity.Ticket;
 import Entity.ProgNutri;
-import Entity.Repas;
 import Service.ServiceEvent;
-import Service.ServiceExercice;
-import Service.ServiceMuscul;
+import Service.ServiceTicket;
 import Service.ServiceNutri;
-import Service.ServiceRepas;
-import Service.ServiceUtilisateur;
 import Util.DataSource;
+import java.time.LocalDateTime;
 /**
  *
  * @author toshiba
@@ -28,66 +23,54 @@ public class JavaPi {
      */
     public static void main(String[] args) {
         
+        LocalDateTime now = LocalDateTime.now();
+        
         
         DataSource db = DataSource.getInstance();
         System.out.println(db);
+        ServiceTicket servReg = new ServiceTicket();
        
 //Ajouter un programme nutrition
+
+
+
+
+
+
+//Event e = new Event(568,"dhia");
+  //  ServiceEvent ps = new ServiceEvent();
+   // ps.Ajouter(e);
        
-   //  Repas r =new Repas("nom", "description", "ingrediant1", "glucides", "legumes", 1, 2, 5);
-   //   ServiceRepas ps = new ServiceRepas();
-    //  ps.Ajouter(r);
-       
-        
-     //  Exercice p = new Exercice(1,"alooo","Prog");
-     // ServiceExercice ps = new ServiceExercice();
-     // ps.Ajouter(p);
 //Modifier un programme nutrition      
        
-      // ProgMuscul p = new ProgMuscul(14,"proteine");
-     //   ServiceMuscul ps = new ServiceMuscul();
-      //  ps.update(14);
+      // ProgNutri p = new ProgNutri(14,"proteine");
+       // ServiceNutri ps = new ServiceNutri();
+       // ps.Modifier(p);
        
        ///// update prog
-       
-       // ProgMuscul p = new ProgMuscul("pg");
-      //  ServiceExercice ps = new ServiceExercice();
-      //  ps.delete(5);
-       
-       
-       
-        //   ServiceNutri ps = new ServiceNutri();
-       // ps.Supprimer(14);
+       // ServiceTicket ps = new ServiceTicket();
+        //ps.updateticket(8,5,"ghj");
+    
+         //servReg.updateTicket(9, 9,"youu");
+
         
+        
+        /////// delete
+     // ServiceTicket ps = new ServiceTicket();
+      //ps.delete(8);
       
 //Afficher nutrition
-       ServiceUtilisateur ps = new ServiceUtilisateur ();
-      System.out.println(ps.Afficher());
+      // ServiceEvent ps = new ServiceEvent();
+      //System.out.println(ps.Afficher());
        
        
        //Ajouter un event
+     //  Ticket t = new Ticket("hhhh",88);
+//      Event p = new Event("hhhh","hhdhd","2000-04-11",15);
+//       ServiceEvent ps = new ServiceEvent();
+//       ps.Ajouter(p);
+//       
        
-    //  Event p = new Event("loisir");
-     //  ServiceEvent ps = new ServiceEvent();
-     //  ps.Ajouter(p);
-       
-        //supprimer un utilisateur
-       
-     
-      //  ServiceUtilisateur ps = new ServiceUtilisateur();
-      //  ps.delete(8);
-     
-     
-     //Ajouter un user
-       
-  //    Utilisateur u = new Utilisateur("yass@gmail.com", "COACH", "hayhahhaha", "yoooo");
-  //    ServiceUtilisateur ps = new ServiceUtilisateur();
-   //   ps.Ajouter(u);
-     
-       ///// update user
-         //ServiceUtilisateur ps = new ServiceUtilisateur();
-       //  ps.update(13);
-     
     }
         
         
