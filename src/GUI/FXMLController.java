@@ -246,24 +246,14 @@ import javafx.stage.Stage;
 //    
        public void show(){
            ServiceEvent ev = new ServiceEvent();
-            ObservableList<Event> list = ev.afficherEvent();
-            
-         
-                nom_e.setCellValueFactory(new PropertyValueFactory<Event,String>("nom")); 
-             
-                  des_e.setCellValueFactory(new PropertyValueFactory<Event,String>("description"));
-              
+            ObservableList<Event> list = ev.afficherEvent();        
+               nom_e.setCellValueFactory(new PropertyValueFactory<Event,String>("nom"));
+               des_e.setCellValueFactory(new PropertyValueFactory<Event,String>("description"));
                date_fin.setCellValueFactory(new PropertyValueFactory<Event,Date>("date"));
                ticket_e.setCellValueFactory(new PropertyValueFactory<Event,String>("ticket_id"));
-                 table_e.setItems(list);
-            
-              searchEven(); 
-                
+               table_e.setItems(list);
+              searchEven();            
     }
- 
-         
-     
-
     @FXML
     private void vider_e(ActionEvent event) {
           tfnom_e.clear();
@@ -298,8 +288,6 @@ ServiceEvent eve = new ServiceEvent();
                      else
                          return false;
                  }
-
-             
              });
              });
          SortedList<Event> sortedData = new SortedList<>(f);
@@ -309,9 +297,7 @@ ServiceEvent eve = new ServiceEvent();
          }catch(Exception e){
              System.out.println(e.getMessage());
                  }  
-       
-    
-   
+     
      }
         
       @FXML
@@ -345,9 +331,7 @@ ServiceEvent eve = new ServiceEvent();
                 table.addCell(_item.getDescription());
                 table.addCell(String.valueOf(_item.getDate()));
                 table.addCell(String.valueOf(_item.getTicket_id()));
-             
-               
-                
+
             });
             
             document.add(table);
