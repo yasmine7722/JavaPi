@@ -18,20 +18,13 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.sql.ResultSet;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 /**
  *
  * @author toshiba
  */
 public class ServiceNutri implements InterfaceCrud<ProgNutri> {
             Connection cnx;
-            private ResultSet rs;
-               private Statement ste;
-    private PreparedStatement pst ;
- 
-            
 
     public ServiceNutri() {
         cnx=DataSource.getInstance().getConn();
@@ -39,27 +32,6 @@ public class ServiceNutri implements InterfaceCrud<ProgNutri> {
             
             
 
-     public ProgNutri  getProgNutri(int id) {
-     
-         String requete = "select * FROM prog_nutri WHERE id = '" + id + "'";
-        ProgNutri cr = new ProgNutri();
-        
-           try {
-            ste = cnx.createStatement();
-                       rs= ste.executeQuery(requete);
-            while (rs.next()) { 
-      
-                
-                 cr.setId(id);
-                 cr.setNom(rs.getString("nom"));
-               
-                 
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(ServiceNutri.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            return cr;
-    }
 
     @Override
     public void Ajouter(ProgNutri e) {
@@ -76,38 +48,6 @@ public class ServiceNutri implements InterfaceCrud<ProgNutri> {
         
     }
 
-    
-public ObservableList<ProgNutri>afficherProg(){
-       ObservableList<ProgNutri> myList = FXCollections.observableArrayList();
-        try {
-            
-            String requete3 = "SELECT nom FROM prog_nutri";
-            Statement st = cnx.createStatement();
-           ResultSet rs = st.executeQuery(requete3);
-           while(rs.next()){
-                         
-       
-               ProgNutri P = new ProgNutri();
-               
-               P.setNom(rs.getString("nom"));
-              
-        
-               
-               myList.add(P);
-           }
-           
-           
-           
-        } catch (SQLException ex) {
-            System.err.println(ex.getMessage());
-        }
-        return myList;
-        
-    }
-    
-    
-    
-    
     
     
     public void update(int id) {

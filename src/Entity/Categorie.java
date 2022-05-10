@@ -5,32 +5,39 @@
  */
 package Entity;
 
+import java.time.LocalDateTime;
+
 /**
  *
- * @author toshiba
+ * @author Dell
  */
-public class ProgNutri {
+public class Categorie {
+
+    public Categorie() {
+    }
     
-      private int id;
-    private String nom;
+        private int id;
+    private String nom ;
+    
+
+   
 
     @Override
     public String toString() {
-        return "ProgNutri{" + "id=" + id + ", nom=" + nom + '}';
+        return "Article{" + "id=" + id + ", nom=" + nom + ", "   +  '}';
     }
 
-    
-    
-    public ProgNutri(int id, String nom) {
+    public Categorie(String nom) {
+        this.nom = nom;
+      
+       
+    }
+
+    public Categorie(int id, String nom) {
         this.id = id;
         this.nom = nom;
-    }
-
-    public ProgNutri() {
-    }
-
-    public ProgNutri(String nom) {
-        this.nom = nom;
+        
+     
     }
 
     public int getId() {
@@ -41,6 +48,7 @@ public class ProgNutri {
         this.id = id;
     }
 
+
     public String getNom() {
         return nom;
     }
@@ -48,6 +56,9 @@ public class ProgNutri {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
+
+    
     
     
     
